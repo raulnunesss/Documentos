@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para a Minha Namorada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fdf6f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #ff6f61;
+      margin-top: 20px;
+    }
+    .carrossel {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .carrossel img {
+      width: 100%;
+      display: none;
+      transition: opacity 1s ease-in-out;
+    }
+    .carrossel img.ativo {
+      display: block;
+      opacity: 1;
+    }
+    .contador {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .carta {
+    background-color: #fff5f8; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px; /* Largura máxima da carta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    font-family: 'Georgia', serif; /* Fonte clássica */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+.carta h2 {
+    color: #ff4d4d; /* Cor do título */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carta p {
+    margin-bottom: 15px;
+    text-align: justify; /* Justifica o texto */
+}
+
+.carta p:last-child {
+    text-align: right; /* Alinha a assinatura à direita */
+    font-style: italic; /* Estilo itálico para a assinatura */
+}
+  </style>
+</head>
+<body>
+  <h1>Feliz Natal 🎄💚</h1>
+  <div class="carrossel">
+    <img src="Imagens/Foto1.jpg" alt="Foto 1" class="ativo">
+    <img src="Imagens/Foto3.jpg" alt="Foto 2">
+    <img src="Imagens/Foto5.JPG" alt="Foto 3">
+    
+    </div>
+    <h1>Juntos</h1>
+    <div class="contador" id="tempoJuntos"></div>
+
+    <div class="carta">
+      <h2>Minha Carta para Você 💌</h2>
+      <p>
+          Minha Princesa,
+      </p>
+      <p>
+          Desde o momento em que te conheci, minha vida ganhou cores e significados que eu jamais imaginaria. Cada sorriso seu é como um raio de sol que ilumina meu mundo. Agradeço por todos os momentos incríveis que passamos juntos, e por ser essa pessoa tão especial e única.
+      </p>
+      <p>
+          Espero que este site te faça sorrir, assim como você ilumina meus dias. Amo você mais do que palavras podem expressar!
+      </p>
+      <p>
+          Com todo o meu amor,<br>
+          Raúl Nunes ❤️
+      </p>
+  </div>
+
+  <footer>
+    <p>Feito com ❤️ para ti!</p>
+  </footer>
+
+  <script>
+    // Data que vocês começaram a namorar
+    const dataInicio = new Date("2024-09-20T00:00:00"); // Data configurada
+    const tempoJuntosEl = document.getElementById("tempoJuntos");
+
+    function atualizarTempo() {
+      const agora = new Date();
+      const diff = agora - dataInicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      tempoJuntosEl.textContent = `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+    }
+
+    setInterval(atualizarTempo, 1000); // Atualiza a cada segundo
+
+    // Carrossel de imagens
+    const imagens = document.querySelectorAll('.carrossel img');
+    let index = 0;
+
+    function trocarImagem() {
+      imagens[index].classList.remove('ativo');
+      index = (index + 1) % imagens.length; // Passa para a próxima imagem, voltando ao início se necessário
+      imagens[index].classList.add('ativo');
+    }
+
+    setInterval(trocarImagem, 3000); // Troca de imagem a cada 3 segundos
+  </script>
+</body>
+</html>
