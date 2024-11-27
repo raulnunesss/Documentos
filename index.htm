@@ -134,6 +134,7 @@
   margin-bottom: 10px;
   font-size: 1.2em;
   color: #555;
+  text-align: center;
 }
 
 .content {
@@ -149,16 +150,31 @@
 .timeline-img {
   margin-top: 15px;
   border-radius: 10px;
-  max-width: 40%; /* Garante que a imagem se ajuste ao tamanho do contêiner */
-  height: auto;
-  box-shadow: 0 2
-  px 5px rgba(0,0,0,0.1);
+  max-width: 100%; /* Garante que a imagem se ajuste ao tamanho do contêiner */
+  height: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 @media (max-width: 768px) {
   .timeline {
-    width: 100%;
+    width: 100%; /* Ocupa toda a largura da tela */
   }
 
+  .event {
+    width: 90%; /* Reduz a largura para deixar espaço nas bordas */ 
+  }
+
+  .date {
+    font-size: 1em; /* Reduz o tamanho do texto da data */
+  }
+
+  .content {
+    padding: 10px; /* Diminui o espaçamento interno */
+  }
+
+  .timeline-img {
+    margin-top: 10px; /* Reduz a margem acima da imagem */
+  }
+}
   </style>
 </head>
 <body>
@@ -210,10 +226,11 @@
 
   <br> 
 
-  <h2>Memórias de 2024</h2>
+    <h2>Memórias de 2024</h2>
     <p>Deixo-te aqui algumas fotos nossas ao longo deste ano para recordar! 💞</p>
 
     <div class="timeline">
+
         <div class="event">
           <div class="date">27/06/2024</div>
           <div class="content">
@@ -230,76 +247,40 @@
               <p>Na primeira vez que estivemos juntos fomos logo comer ás docas</p>
               <img src="Imagens/Foto22.jpg" alt="T2" class="timeline-img">
             </div>
-          </div>
-
-        <div class="event">
-          <div class="date">08/08/2024</div>
-          <div class="content">
-            <h3>Ida a Faro</h3>
-            <p>Era de verão tinhas ido para faro e fui ter contigo lá pela primeira vez.</p>
-            <img src="Imagens/Foto5.jpg" alt="T3" class="timeline-img">
-          </div>
         </div>
 
         <div class="event">
             <div class="date">08/08/2024</div>
             <div class="content">
-              <h3>Primeira vez em tua casa</h3>
-              <p>Neste verão fui pela priemria vez a tua casa e conhecer a tua família</p>
+              <h3>Ida a Faro</h3>
+              <p>Era de verão tinhas ido para faro e fui ter contigo lá pela primeira vez.</p>
               <img src="Imagens/Foto5.jpg" alt="T3" class="timeline-img">
             </div>
-          </div>
-      </div>
+        </div>          
+
+
+        <div class="event">
+            <div class="date">10/08/2024</div>
+            <div class="content">
+              <h3>Primeira vez em tua casa</h3>
+              <p>Neste verão fui pela priemria vez a tua casa e conhecer a tua família</p>
+              <img src="Imagens/Foto23.jpg" alt="T4" class="timeline-img">
+            </div>
+        </div>
+    </div>
+    
  
 
 
-
-
-
-
-
-
-
-
-    <div class="galeria">
-      <img src="Imagens/Foto5.jpg" alt="Foto 1">
-      <img src="Imagens/Foto6.jpg" alt="Foto 2">
-  </div>
-  <div  class="galeria">
-      <img src="Imagens/Foto7.jpg" alt="Foto 5">
-      <img src="Imagens/Foto8.jpg" alt="Foto 6">
-  </div>
-  <div  class="galeria">
-      <img src="Imagens/Foto9.jpg" alt="Foto 5">
-      <img src="Imagens/Foto10.jpg" alt="Foto 6">
-  </div>
-  <div  class="galeria">
-      <img src="Imagens/Foto11.jpg" alt="Foto 5">
-      <img src="Imagens/Foto12.jpg" alt="Foto 6">
-  </div>
-  <div  class="galeria">
-      <img src="Imagens/Foto13.jpg" alt="Foto 5">
-      <img src="Imagens/Foto14.jpg" alt="Foto 6">
-  </div>
-  <div  class="galeria">
-    <img src="Imagens/Foto15.jpg" alt="Foto 5">
-    <img src="Imagens/Foto16.jpg" alt="Foto 6">
-</div>
-<div  class="galeria">
-    <img src="Imagens/Foto17.jpg" alt="Foto 5">
-    <img src="Imagens/Foto18.jpg" alt="Foto 6">
-</div>
-
-
   <!-- Caixa para Resposta -->
-  <div id="resposta-box">
-    <h3>Se quiseres deixar-me uma menssagem...</h3>
-    <!-- Formulário com ação do Formspree -->
-    <form action="https://formspree.io/f/mdkowear" method="POST">
-        <textarea name="mensagem" placeholder="Eescreve..." required></textarea><br>
-        <button type="submit">Enviar Resposta</button>
-    </form>
-  </div>
+    <div id="resposta-box">
+        <h3>Se quiseres deixar-me uma menssagem...</h3>
+          <!-- Formulário com ação do Formspree -->
+        <form action="https://formspree.io/f/mdkowear" method="POST">
+            <textarea name="mensagem" placeholder="Eescreve..." required></textarea><br>
+            <button type="submit">Enviar Resposta</button>
+        </form>
+    </div>
 
   <script>
     // Função para calcular o tempo desde uma data até o momento atual
