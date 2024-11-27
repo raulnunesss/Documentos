@@ -113,6 +113,55 @@
     #resposta-box button:hover {
         background-color: #333;
     }    
+    .timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  width: 80%; /* Ajusta a largura do conteúdo */
+  position: relative;
+}
+
+.date {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.content {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.timeline-img {
+  margin-top: 15px;
+  border-radius: 10px;
+  max-width: 100%; /* Garante que a imagem se ajuste ao tamanho do contêiner */
+  height: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+  .timeline {
+    width: 100%;
+  }
+
+  .event {
+    width: 90%;
+  }
+}
   </style>
 </head>
 <body>
@@ -137,16 +186,16 @@
       </p>
       <p>
         Hoje não completamos um ano juntos, mas estamos a passar o nosso primeiro Natal não fazia ideia de o
-        passar com uma pessoa tão especial ao meu lado. Nem consigo te o dizer em palavras o quanto estou feliz 
+        passar com uma pessoa tão especial ao meu lado. Nem consigo te dizer em palavras o quanto estou feliz 
         por te ter. Este ano foi especial de tantas formas, mas o melhor presente que a vida me deu foi  conhecer-te. <br><br>
 
         Parece incrível pensar em como tudo começou, e como, dia após dia fomos construindo isto tudo tão bonito. 
         A tua presença enche os meus dias de felicidade, e cada sorriso teu faz o meu coração bater mais forte. 
         Nunca imaginei que alguém me pudesse me fazer sentir assim: completo, amado e inspirado a ser uma pessoa melhor.<br><br>
 
-        Neste Natal, tudo o que te desejo é que te sintas tão especial o quão és para mim. Que cada abraço meu te aqueça, 
+        Neste Natal, tudo o que te desejo é que te sintas tão especial o quão és para mim. Que cada abraço meu te aqueça,   
         e que cada momento que compartilharmos seja uma lembrança para recordar. Quero que tu também saibas que o meu amor 
-        por ti cresce dia após dia, e mal posso esperar pelos próximos Natais a teu lado.<br><br>
+        por ti cresce dia após dia, e mal posso esperar pelos próximos Natais ao teu lado.<br><br>
 
         Obrigado por seres minha namorada, melhor amiga e a pessoa que me faz mais feliz. Que este seja o primeiro de 
         muitos Natais que celebraremos como um casal, contribuindo memórias, sonhos e uma história só nossa.<BR> <BR>
@@ -166,6 +215,37 @@
 
   <h2>Memórias de 2024</h2>
     <p>Deixo-te aqui algumas fotos nossas ao longo deste ano para recordar! 💞</p>
+
+    <div class="timeline">
+        <div class="event">
+          <div class="date">01/01/2022</div>
+          <div class="content">
+            <h3>Primeiro encontro</h3>
+            <p>Nos conhecemos no café do centro e falamos por horas. O início de tudo!</p>
+            <img src="primeiro-encontro.jpg" alt="Foto do nosso primeiro encontro" class="timeline-img">
+          </div>
+        </div>
+        
+        <div class="event">
+          <div class="date">14/02/2022</div>
+          <div class="content">
+            <h3>Primeiro Dia dos Namorados</h3>
+            <p>Jantamos naquele restaurante especial e trocamos nossos primeiros presentes.</p>
+            <img src="primeiro-dia-namorados.jpg" alt="Foto do jantar de Dia dos Namorados" class="timeline-img">
+          </div>
+        </div>
+      </div>
+ 
+
+
+
+
+
+
+
+
+
+
     <div class="galeria">
       <img src="Imagens/Foto5.jpg" alt="Foto 1">
       <img src="Imagens/Foto6.jpg" alt="Foto 2">
